@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartmut Rosa - Mapa Conceptual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .mapa-mental {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .nodo {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nodo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .nodo-titulo {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .nodo-contenido {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .nodo-contenido h3 {
+            color: #764ba2;
+            margin: 15px 0 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .nodo-contenido ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .nodo-contenido li {
+            margin-bottom: 8px;
+        }
+        
+        .destaque {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .central {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .central .nodo-titulo {
+            color: white;
+            border-bottom-color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .mapa-mental {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌀 Hartmut Rosa</h1>
+            <p class="subtitle">Aceleración Social y Cultura Política</p>
+        </header>
+        
+        <div class="mapa-mental">
+            <div class="nodo central">
+                <div class="nodo-titulo">📍 Concepto Central</div>
+                <div class="nodo-contenido">
+                    <p><strong>La aceleración social</strong> es el motor invisible de la modernidad que atraviesa todas las dimensiones de la vida: estructura, cultura, personalidad y naturaleza.</p>
+                    <p style="margin-top: 15px;"><strong>Tres dimensiones:</strong></p>
+                    <ul>
+                        <li>Aceleración tecnológica</li>
+                        <li>Aceleración del cambio social</li>
+                        <li>Aceleración del ritmo de vida</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">⚡ Aceleración Tecnológica</div>
+                <div class="nodo-contenido">
+                    <p>Aumento de velocidad en transporte, comunicación y producción.</p>
+                    <h3>Consecuencia:</h3>
+                    <p>La comunicación instantánea "aniquila" el espacio → se convierte en "no-lugares" (Marc Augé).</p>
+                    <div class="destaque">El tiempo domina sobre el espacio</div>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">🔄 Cambio Social Acelerado</div>
+                <div class="nodo-contenido">
+                    <p>Las estructuras sociales cambian cada vez más rápido:</p>
+                    <ul>
+                        <li><strong>Familia:</strong> De siglos → una generación → menos</li>
+                        <li><strong>Trabajo:</strong> De herencia → vocación única → múltiples empleos</li>
+                    </ul>
+                    <div class="destaque">Pérdida de estabilidad institucional</div>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">🏭 Motor Estructural</div>
+                <div class="nodo-contenido">
+                    <h3>Diferenciación funcional (Luhmann)</h3>
+                    <p>La sociedad se estructura en sistemas autónomos: economía, política, ciencia, arte, educación...</p>
+                    <h3>El ciclo:</h3>
+                    <p>Más opciones → Procesar más rápido → Aún más opciones → Más aceleración</p>
+                    <div class="destaque">Resultado: Desincronización sistémica</div>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">🛑 Formas de Desaceleración</div>
+                <div class="nodo-contenido">
+                    <ul>
+                        <li><strong>Límites naturales:</strong> Lo que no se puede acelerar</li>
+                        <li><strong>Nichos sociales:</strong> Comunidades aisladas</li>
+                        <li><strong>Disfuncional:</strong> Depresión, exclusión</li>
+                        <li><strong>Deliberada instrumental:</strong> Yoga para ser más productivo</li>
+                        <li><strong>Radical:</strong> Decrecimiento, fundamentalismos</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-style: italic;">La desaceleración no equilibra la aceleración, es un fenómeno residual.</p>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">😔 Consecuencias Éticas</div>
+                <div class="nodo-contenido">
+                    <h3>El individuo acelerado:</h3>
+                    <ul>
+                        <li><strong>Identidades inestables</strong> → Conflicto con la autonomía</li>
+                        <li><strong>Pérdida de narrabilidad:</strong> Los compromisos a largo plazo se vuelven contingentes</li>
+                        <li><strong>Tiempo congelado:</strong> Parálisis existencial por falta de dirección</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">⚖️ Consecuencias Políticas</div>
+                <div class="nodo-contenido">
+                    <ul>
+                        <li><strong>Desincronización democrática:</strong> La economía va más rápido que la deliberación</li>
+                        <li><strong>De la utopía a la resignación:</strong> Ya no se promete progreso, sino "ajuste necesario"</li>
+                        <li><strong>Desintegración social:</strong> Orientaciones políticas efímeras</li>
+                        <li><strong>Jaula de hierro:</strong> Frenesí sin dirección ni capacidad de cambio</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">📱 Cultura Política Acelerada</div>
+                <div class="nodo-contenido">
+                    <h3>La política de clicks:</h3>
+                    <p>Consumo fragmentado y superficial de información. La visibilidad y la emoción priman sobre argumentos y proyectos.</p>
+                    <div class="destaque">Cultura política líquida</div>
+                    <p style="margin-top: 10px;">Las orientaciones políticas son transitorias, situacionales y emocionalmente fluctuantes.</p>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">⏱️ Desincronización Política</div>
+                <div class="nodo-contenido">
+                    <p><strong>Mercados financieros/tecnología:</strong> Operan en milisegundos</p>
+                    <p><strong>Democracia:</strong> Requiere deliberación y consenso</p>
+                    <h3>Crisis de legitimidad:</h3>
+                    <p>Los gobiernos parecen incapaces de responder al ritmo acelerado. Los ciudadanos demandan soluciones inmediatas.</p>
+                    <p style="margin-top: 10px; font-style: italic;">Ambivalencia: se exige rapidez pero se lamenta la pérdida de profundidad.</p>
+                </div>
+            </div>
+            
+            <div class="nodo">
+                <div class="nodo-titulo">🌱 Alternativas</div>
+                <div class="nodo-contenido">
+                    <h3>Búsqueda de sentido político:</h3>
+                    <p>Movimientos que valoran:</p>
+                    <ul>
+                        <li>Tiempo compartido</li>
+                        <li>Deliberación lenta</li>
+                        <li>Acción local y cooperación</li>
+                        <li>Autonomía frente al mercado</li>
+                    </ul>
+                    <p style="margin-top: 10px; color: #f5576c; font-weight: bold;">⚠️ Estas prácticas son frágiles y a veces refuerzan la aceleración.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
